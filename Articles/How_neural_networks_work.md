@@ -75,12 +75,12 @@ To understand why this is the case and have a visual demonstration I recommend r
 
 This is a stunning result, it basically means that given any problem that can be represented as a function, a neural network can solve it (or that any behavior that can be represented as a function, a neural network can emulate it).
 
-**N.B.** If after reading this you went to buy Open AI shares, chill out, this does not mean that a neural network can solve any problem in practice, but that it can solve any problem that can be represented as a function and for which we have enough data to represent it well and enough parameters to emulate it well, even if there are many problems (or behaviors) that fall into this category, some will never be able to fall into it and others do not fall into it with current technologies.</br></br>
+**N.B.** If after reading this you went to buy Open AI shares, chill out, this does not mean that a neural network can solve any problem in practice, but that it can solve any problem that can be represented as a function and for which we have enough data to represent it well and enough parameters to emulate it well, even if there are many problems (or behaviors) that fall into this category, some will never be able to fall into it and others do not fall into it with current technologies.</br></br></br>
 
 
 ## Training
 
-So far we have analyzed the structure of a neural network, and we have seen that [a neural network can emulate any function](https://github.com/niedev/Blog/edit/main/Articles/How_neural_networks_work.md#wait-but-why), now we will cover how to find the values of the weights and biases that will emulate that function, this process is called training.
+So far we have analyzed the structure of a neural network, and we have seen that [a neural network can emulate any function](https://github.com/niedev/Blog/edit/main/Articles/How_neural_networks_work.md#wait-but-why), now we will cover how to find the values of the weights and biases that will emulate that function, this process is called training.</br></br>
 
 ### Cost function
 
