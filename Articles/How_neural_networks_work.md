@@ -65,5 +65,13 @@ This representation is the basis of the real representation in a computer of a n
 ![image](https://github.com/user-attachments/assets/a3d0ab3e-95f6-4353-b9e0-3bea9d2ffc5c)
 </br></br>
 
+#### Wait, but why?
+
+Why does a feed-forward neural network have this structure? Besides emulating the structure of some parts of our brain (yes, not only the artificial neuron is inspired by biology, but also a feed-forward network emulates a biological neural network), the reason behind such an architecture (and most likely also the reason behind the structure of our brain) is that a feed-forward network can emulate any possible function, with any number of input variables and any number of output variables, its accuracy depends on the number of neurons the network has and on the amount and quality of training data, the more they are, the closer the approximated function can be to the real one.
+
+
+
+
 ## Training
 
+So far we have analyzed the structure of a neural network, and we have seen that a neural network can emulate any function (link), but how do we emulate a function?
