@@ -38,8 +38,8 @@ Artificial neurons are inspired by biological ones, they are a simpler represent
 ![image](https://github.com/user-attachments/assets/a44445fe-f75a-4e29-90ae-696af455ddc7)
 
 <img align="right" width="500" src="https://github.com/user-attachments/assets/672c2d81-e487-4344-85ef-c232b4f19b87">
-</br></br>
 
+</br></br>
 The network is divided into levels (L in total), each level l is formed by n<sub>l</sub> neurons, the i-th neuron (starting from the top, see figure below) of the l-th level (starting from the left, see figure below) is indicated with: **neuron<sub>i</sub><sup>(l)</sup>**.
 
 The set **θ** is a set containing L matrices and L tuples, a matrix and a tuple for each level, with the matrix of the l-th level, indicated with **W<sup>(l)</sup>**, which contains in the i-th row the **weights** of the i-th neuron of the l-th level and the tuple of the l-th level, indicated with **b<sup>(l)</sup>** which contains in the i-th element the **bias** of the i-th neuron of the l-th level.</br>
