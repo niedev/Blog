@@ -35,6 +35,8 @@ Artificial neurons are inspired by biological ones, they are a simpler represent
 
 **A <code>feed forward network</code> is a function that receives as input n<sub>0</sub> real values ​​x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n0</sub>, an activation function σ, and a set θ of matrices and tuples** (containing the weights and biases of each neuron in the network) **and produces as output n<sub>L</sub> real values ​​y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub> depending on all inputs, more precisely the law f is a law defined through the combination of [artificial neurons](https://github.com/niedev/Blog/edit/main/Articles/How_neural_networks_work.md#artificial-neuron) organized in a network-like way, structured in this way:**
 
+![image](https://github.com/user-attachments/assets/a44445fe-f75a-4e29-90ae-696af455ddc7)
+
 The network is divided into levels (L in total), each level l is formed by n<sub>l</sub> neurons, the i-th neuron (starting from the top, see figure below) of the l-th level (starting from the left, see figure below) is indicated with: **neuron<sub>i</sub><sup>(l)</sup>**.
 
 The set **θ** is a set containing L matrices and L tuples, a matrix and a tuple for each level, with the matrix of the l-th level, indicated with **W<sup>(l)</sup>**, which contains in the i-th row the **weights** of the i-th neuron of the l-th level and the tuple of the l-th level, indicated with **b<sup>(l)</sup>** which contains in the i-th element the **bias** of the i-th neuron of the l-th level.</br>
@@ -47,5 +49,3 @@ The second level is formed by n<sub>2</sub> neurons and each neuron among them, 
 And so on up to the L-th (last) level, formed by n<sub>L</sub> neurons and each neuron among them, indicated by **neuron<sub>I</sub><sup>(L)</sup>**, has as input the outputs of all the neurons of the previous level (the L-1 level), as weights the elements of the i-th column of W<sup>(L)</sup> and as bias the i-th element of b<sup>(L)</sup>, the outputs of the neurons of this last level are the outputs y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub> of f, that is, of the neural network itself.
 
 In general, therefore, the network is formed by L levels and each level l is formed by n<sub>l</sub> neurons and each neuron among these, indicated by **neuron<sub>I</sub><sup>(l)</sup>**, has as input the outputs of all the neurons of the previous level (unless l=1, in which case then the inputs are the inputs x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n0</sub> of f), as weights the elements of the i-th column of W<sup>(l)</sup> and as bias the i-th element of b<sup>(l)</sup>, the outputs of the neurons of the last level (l=L) are the outputs y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub> of f, that is, of the neural network itself.
-
-Let's see a visual and symbolic representation of this scheme (that is, of the structure of a feed forward network) to better understand it:
