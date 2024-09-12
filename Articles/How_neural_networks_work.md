@@ -80,4 +80,8 @@ This is a stunning result, it basically means that given any problem that can be
 
 ## Training
 
-So far we have analyzed the structure of a neural network, and we have seen that a neural network can emulate any function (link), but how do we emulate a function?
+So far we have analyzed the structure of a neural network, and we have seen that [a neural network can emulate any function](https://github.com/niedev/Blog/edit/main/Articles/How_neural_networks_work.md#wait-but-why), now we will cover how to find the values of the weights and biases that will emulate that function, this process is called training.
+
+### Cost function
+
+**Given a feed forward network <code>f(x, σ, θ): D x S<sub>σ</sub> x S<sub>θ</sub> -> C</code>, where D = D<sub>1</sub> x D<sub>2</sub> x...x D<sub>n0</sub>** (x = (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n0</sub>) ∈ D, x<sub>1</sub> ∈ D<sub>1</sub>, x<sub>2</sub> ∈ D<sub>2</sub>, ..., x<sub>n0</sub> ∈ D<sub>n0</sub>)**, C = C<sub>1</sub> x C<sub>2</sub> x...x C<sub>nL</sub>** (y = (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub>) ∈ C, y<sub>1</sub> ∈ C<sub>1</sub>, y<sub>2</sub> ∈ C<sub>2</sub>, ..., y<sub>nL</sub> ∈ C<sub>nL</sub>)**, S<sub>σ</sub> is the set of all possible activation functions σ, S<sub>θ</sub> is the set of all possible combinations of weights and biases θ, and a set T consisting of m pairs of the form (x<sub>t</sub> ∈ D, y<sub>t</sub> ∈ C)** (this set represents the training data of the network, i.e. a set of correct examples that the network has to emulate, where x<sub>t</sub> represents the input data of the example and y<sub>t</sub> the output data that the example produces as a result, usually all the outputs of the examples are produced by humans):
