@@ -21,8 +21,7 @@ Given a real function of real var **σ**, called the **activation function**, n 
 An **artificial neuron** (or simply **neuron**) is a [scalar function of n real variables](https://en.wikipedia.org/wiki/Function_of_several_real_variables) that receives as input n real values **​​x<sub>1</sub>**, **​​x<sub>2</sub>**, ..., **​​x<sub>n</sub>**, and produces a real value equal to the image, in σ, of the sum of ​​x<sub>1</sub>, ​​x<sub>2</sub>, ..., ​​x<sub>n</sub>, with each x<sub>i</sub> multiplied by the weight W<sub>i</sub>, and with b also added.</br>
 Formally, given the premises above, an artificial neuron is the function specified as follows:
 
-**neuron: D<sub>1</sub> x D<sub>2</sub> x ... x D<sub>n</sub> --> R, &nbsp;&nbsp;&nbsp;&nbsp; neuron(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>)  =  σ(b + W<sub>1</sub> * x<sub>1</sub> + W<sub>2</sub> * x<sub>2</sub> +...+ W<sub>n</sub> * x<sub>n</sub>)** </br></br>
-
+**neuron: D<sub>1</sub> x D<sub>2</sub> x ... x D<sub>n</sub> --> R, &nbsp;&nbsp;&nbsp;&nbsp; neuron(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>)  =  σ(b + W<sub>1</sub> * x<sub>1</sub> + W<sub>2</sub> * x<sub>2</sub> +...+ W<sub>n</sub> * x<sub>n</sub>)**
 
 #### Artificial vs biological neurons:
 
@@ -52,4 +51,12 @@ The second level is formed by n<sub>2</sub> neurons and each neuron among them, 
 And so on up to the L-th (last) level, formed by n<sub>L</sub> neurons and each neuron among them, indicated by **neuron<sub>I</sub><sup>(L)</sup>**, has as input the outputs of all the neurons of the previous level (the L-1 level), as weights the elements of the i-th column of W<sup>(L)</sup> and as bias the i-th element of b<sup>(L)</sup>, the outputs of the neurons of this last level are the outputs y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub> of f, that is, of the neural network itself.
 
 In general, therefore, the network is formed by L levels and each level l is formed by n<sub>l</sub> neurons and each neuron among these, indicated by **neuron<sub>I</sub><sup>(l)</sup>**, has as input the outputs of all the neurons of the previous level (unless l=1, in which case then the inputs are the inputs x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n0</sub> of f), as weights the elements of the i-th column of W<sup>(l)</sup> and as bias the i-th element of b<sup>(l)</sup>, the outputs of the neurons of the last level (l=L) are the outputs y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub> of f, that is, of the neural network itself.
+
+#### Definition with matrices:
+
+Given the definition of [product](https://en.wikipedia.org/wiki/Matrix_multiplication) and [sum](https://en.wikipedia.org/wiki/Matrix_addition) between matrices, we can formulate the neural network above also not considering the neuron functions but the level functions, each indicated by **level<sup>(l)</sup>**, which are defined as the "image" in σ of the product between the matrix W<sup>(l)</sup> and the matrix z<sup>(l-1)</sup> (where z<sup>(l-1)</sup> is a matrix formed by a single column (or a vector, or a tuple) containing all the z<sub>i</sub><sup>(l-1)</sup> (ordered according to i from top to bottom)) and with the added matrix b<sup>(l)</sup> (the "image" in σ of the matrix Z resulting from the product and the sum is actually Z but with σ applied to each of its elements, as can be seen from the image below).
+
+The product of the matrix W(l) and the matrix z(l-1) and with the addition of the matrix b(l), is called the preactivation value of level l and is indicated with the symbol a(l) = (a(l)1, ..., a(l)nl), while its image in σ is called the activation value of level l, and is indicated with the symbol z(l) = (z(l)1, ..., z(l)nl).
+
+This representation is the basis of the real representation in a computer of a neural network, since usually dedicated hw and techniques are used to make the product between matrices faster, let's see it:
 
