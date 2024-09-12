@@ -21,14 +21,14 @@ Given a real function of real var **σ**, called the **activation function**, n 
 An **artificial neuron** (or simply **neuron**) is a [scalar function of n real variables](https://en.wikipedia.org/wiki/Function_of_several_real_variables) that receives as input n real values **​​x<sub>1</sub>**, **​​x<sub>2</sub>**, ..., **​​x<sub>n</sub>**, and produces a real value equal to the image, in σ, of the sum of ​​x<sub>1</sub>, ​​x<sub>2</sub>, ..., ​​x<sub>n</sub>, with each x<sub>i</sub> multiplied by the weight W<sub>i</sub>, and with b also added.</br>
 Formally, given the premises above, an artificial neuron is the function specified as follows:
 
-**neuron: D<sub>1</sub> x D<sub>2</sub> x ... x D<sub>n</sub> --> R, &nbsp;&nbsp;&nbsp;&nbsp; neuron(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>)  =  σ(b + W<sub>1</sub> * x<sub>1</sub> + W<sub>2</sub> * x<sub>2</sub> +...+ W<sub>n</sub> * x<sub>n</sub>)**
+**neuron: D<sub>1</sub> x D<sub>2</sub> x ... x D<sub>n</sub> --> R, &nbsp;&nbsp;&nbsp;&nbsp; neuron(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>)  =  σ(b + W<sub>1</sub> * x<sub>1</sub> + W<sub>2</sub> * x<sub>2</sub> +...+ W<sub>n</sub> * x<sub>n</sub>)** </br></br>
 
 #### Artificial vs biological neurons:
 
 I'm not a biologist, so take this part with a grain of salt:
 
 Artificial neurons are inspired by biological ones, they are a simpler representation of them, but they should work more or less on the same principles. Although it is still not known exactly how a single biological neuron functions, by combining several artificial neurons it is possible to emulate its behavior (see [this paper](https://www.quantamagazine.org/how-computationally-complex-is-a-single-neuron-20210902/)).
-</br></br>
+</br></br></br>
 
 ## Definition of Feed Forward Network
 
@@ -59,4 +59,11 @@ Given the definition of [product](https://en.wikipedia.org/wiki/Matrix_multiplic
 The product of the matrix W<sup>(l)</sup> and the matrix z<sup>(l-1)</sup> and with the addition of the matrix b<sup>(l)</sup>, is called the **preactivation value of level l** and is indicated with the symbol **a<sup>(l)</sup> = (a<sup>(l)</sup><sub>1</sub>, ..., a<sup>(l)</sup><sub>nl</sub>)**, while its image in σ is called the **activation value of level l**, and is indicated with the symbol **z<sup>(l)</sup> = (z<sup>(l)</sup><sub>1</sub>, ..., z<sup>(l)</sup><sub>nl</sub>)**.
 
 This representation is the basis of the real representation in a computer of a neural network, since usually dedicated hw and techniques are used to make the product between matrices faster, let's see it:
+
+![image](https://github.com/user-attachments/assets/6248f734-a224-40d6-86f0-39ae8456570b)
+
+![image](https://github.com/user-attachments/assets/a3d0ab3e-95f6-4353-b9e0-3bea9d2ffc5c)
+</br></br>
+
+## Training
 
