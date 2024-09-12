@@ -60,7 +60,7 @@ The product of the matrix W<sup>(l)</sup> and the matrix z<sup>(l-1)</sup> and w
 
 This representation is the basis of the real representation in a computer of a neural network, since usually dedicated hw and techniques are used to make the product between matrices faster, let's see it:
 
-![image](https://github.com/user-attachments/assets/6248f734-a224-40d6-86f0-39ae8456570b)
+![image](https://github.com/user-attachments/assets/85fea60d-6d8f-4acb-8e4c-f581dc628b92)
 
 ![image](https://github.com/user-attachments/assets/a3d0ab3e-95f6-4353-b9e0-3bea9d2ffc5c)
 </br></br>
