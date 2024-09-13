@@ -114,3 +114,5 @@ The problem, however, is that this type of calculations on functions that often 
 
 **N.B.** With this method, we do not calculate the cost function at each point of its domain, nor at θ<sub>0</sub>, we only calculate the gradient of f<sub>C</sub> of the point θ<sub>0</sub> at each movement of θ<sub>0</sub> (which is still a very intensive calculation, in fact usually different optimization techniques are used, including the use of GPUs, stochastic gradient descent, etc).
 
+**N.B.** The learning rate can be a fixed value, but it is usually decreased as the gradient descent algorithm progresses, this allows you to start from a higher value, which allows you to skip any local minimum or saddle points encountered at the beginning, when you have not yet descended very far, and gradually decrease it to avoid jumping back and forth to a local minimum point with a very low value (since we have descended for a long time), which would waste a lot of time to get to the end of the training.
+
