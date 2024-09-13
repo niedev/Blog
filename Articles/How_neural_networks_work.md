@@ -130,5 +130,9 @@ In addition, I remember that stochastic gradient descent, as well as gradient de
 
 A good way to imagine the difference between gradient descent and stochastic gradient descent is to think that the first case is a careful hiker who slowly chooses the steepest possible path to descend, while the second is a drunk who runs and goes a bit here and there, rolls, etc., but in the end arrives at the same destination as the hiker and faster. In fact, if there is a small re-entry before the bottom along the best path the hiker gets stuck in it, while the drunk rolls over it and therefore accidentally overtakes him.
 
+**But why does this method work, that is, it manages to stop at a point with an image close to the value of the image of the global minimum point of f<sub>C</sub>** (i.e. close to 0)**, and does not remain stuck at a local minimum point or a saddle point with an image with a value too high? Let's see an informal explanation:**
+
+For the [second gradient](https://www.quora.com/What-is-the-second-derivative-equivalent-of-the-gradient) of f<sub>C</sub> in θ<sub>0</sub> to be [positive definite](https://www.quora.com/What-is-the-second-derivative-equivalent-of-the-gradient) (i.e. θ<sub>0</sub> is a local minimum), all directional derivatives of f<sub>C</sub> in θ<sub>0</sub> must be > 0, and as m increases (number of weights and biases of f, directly proportional to the number of its neurons, which in a deep neural network are usually at least millions) the number of possible directions (and therefore of directional derivatives) increases exponentially, so when ∇f<sub>C</sub>(θ<sub>0</sub>) is = 0 and m is large it is much more likely that H<sub>fc</sub>(θ<sub>0</sub>) (second gradient of f<sub>C</sub> in θ<sub>0</sub>) is neither > 0 nor < 0 and therefore that θ<sub>0</sub> is a saddle point of f<sub>C</sub> rather than a local minimum point.
+
 
 
