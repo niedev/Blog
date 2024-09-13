@@ -98,6 +98,6 @@ So far we have analyzed the structure of a neural network, and we have seen that
 
 **The f<sub>C</sub> function can have several implementations, but we will only examine one, the <code>quadratic cost function</code>, this is a cost function f<sub>C</sub> defined as:**
 
-f<sub>C</sub>: S<sub>θ</sub> -> R, with f<sub>C</sub>(θ) = efc(...) = $\frac{(f(xt_1, σ, θ)}{m}$
+**f<sub>C</sub>: S<sub>θ</sub> -> R, &nbsp;&nbsp; with f<sub>C</sub>(θ) = efc(...) =** $\mathbf{\frac{(|f(xt_1, σ, θ) - yt_1|)^2 + (|f(xt_2, σ, θ) - yt_2|)^2 +...+ (|f(xt_m, σ, θ) - yt_m|)^2}{m}}$
 
 In practice this type of cost function associates to each combination of weights and biases of f a value that represents the average squared distance between the results of f with the weights and biases θ (f(xt1, σ, θ)) and the results of the experiments (yti) for each input xti ∈ a pair of T (the bars || indicate the modulus of the result of the subtraction of the two nL-tuples, i.e. the distance between the two nL-tuples)
