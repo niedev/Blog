@@ -90,6 +90,14 @@ So far we have analyzed the structure of a neural network, and we have seen that
 
 **The cost function of the network f is a [scalar function with k real variables](https://en.wikipedia.org/wiki/Function_of_several_real_variables)** (k is the number of elements of each tuple ∈ S<sub>θ</sub>, i.e. the total number of weights and biases of the neural network f) **of the form:**
 
-**f<sub>C</sub>: S<sub>θ</sub> -> R, &nbsp; with f<sub>C</sub>(θ) = e<sub>fc</sub>(f(xt<sub>1</sub>, σ, θ), yt<sub>1</sub>, f(xt<sub>2</sub>, σ, θ), yt<sub>2</sub>, ..., f(xt<sub>m</sub>, σ, θ), yt<sub>m</sub>)**, &nbsp;&nbsp; where (xt<sub>1</sub>, yt<sub>1</sub>) U (xt<sub>2</sub>, yt<sub>2</sub>) U...U (xt<sub>m</sub>, yt<sub>m</sub>) = T (i.e. (xt<sub>1</sub>, yt<sub>1</sub>), (xt<sub>2</sub>, yt<sub>2</sub>), ..., (xt<sub>m</sub>, yt<sub>m</sub>) are all the elements of T)
+**f<sub>C</sub>: S<sub>θ</sub> -> R, &nbsp; with f<sub>C</sub>(θ) = e<sub>fc</sub>(f(xt<sub>1</sub>, σ, θ), yt<sub>1</sub>, f(xt<sub>2</sub>, σ, θ), yt<sub>2</sub>, ..., f(xt<sub>m</sub>, σ, θ), yt<sub>m</sub>)**, &nbsp;&nbsp; where (xt<sub>1</sub>, yt<sub>1</sub>) U (xt<sub>2</sub>, yt<sub>2</sub>) U...U (xt<sub>m</sub>, yt<sub>m</sub>) = T, i.e. (xt<sub>1</sub>, yt<sub>1</sub>), (xt<sub>2</sub>, yt<sub>2</sub>), ..., (xt<sub>m</sub>, yt<sub>m</sub>) are all the elements of T)
 
 **Where e<sub>fc</sub> is an expression that has among the operands f(xt<sub>1</sub>, σ, θ), yt<sub>1</sub>, f(xt<sub>2</sub>, σ, θ), yt<sub>2</sub>, ..., f(xt<sub>m</sub>, σ, θ), yt<sub>m</sub> and represents, for each possible combination of the weights and biases of f, the average amount of variation between the values ​​produced by f with input values ​​from the experiments** (f(xt<sub>i</sub>, σ, θ)) **and the values ​​of the same experiments produced by humans** (yt<sub>i</sub>)**, consequently:**
+
+**In other words, f<sub>C</sub> is a function that associates each combination of weights and biases of f with the distance of f from our desired behavior.**
+
+**The f<sub>C</sub> function can have several implementations, but we will only examine one, the <code>quadratic cost function</code>, this is a cost function f<sub>C</sub> defined as:**
+
+f<sub>C</sub>: S<sub>θ</sub> -> R, with f<sub>C</sub>(θ) = efc(...) = $\frac{(f(xt_1, σ, θ)}{m}$
+
+In practice this type of cost function associates to each combination of weights and biases of f a value that represents the average squared distance between the results of f with the weights and biases θ (f(xt1, σ, θ)) and the results of the experiments (yti) for each input xti ∈ a pair of T (the bars || indicate the modulus of the result of the subtraction of the two nL-tuples, i.e. the distance between the two nL-tuples)
