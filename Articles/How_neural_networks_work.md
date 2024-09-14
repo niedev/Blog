@@ -171,5 +171,9 @@ The variable θ ∈ S<sub>θ</sub> instead is:
 
 **N.B.** The point θ<sub>0</sub> is the point that will be used for the gradient descent, so we start from a random point θ<sub>0</sub>, we calculate the gradient of f<sub>C</sub> in θ<sub>0</sub>, we continue in the direction of the gradient modifying θ<sub>0</sub> accordingly, we recalculate the gradient in the new point θ<sub>0</sub>, we continue in this way until we arrive at a point θ<sub>0</sub> that is a local minimum (or global, but it is almost impossible) such that f<sub>C</sub>(θ<sub>0</sub>) is low enough.
 
+I note that S<sub>θ</sub> can also be written as: S<sub>θ1</sub> x S<sub>θ2</sub> x ... x S<sub>θk</sub> where S<sub>θd</sub> (with 1 <= d <= k) is the membership set of the d-th component of θ.
 
+Now to simplify the calculations let's consider a series of cost functions, one for each element of T, more precisely let's consider m cost functions of the form:
+
+**f<sub>Cb</sub>: S<sub>θ</sub> -> R,  &nbsp;&nbsp; with f<sub>Cb</sub>(θ) = $\frac{(|f(xt_b, σ, θ) - yt_b|)^2}{1}$ = $(|f(xt_b, σ, θ) - yt_b|)^2$**, &nbsp;&nbsp; 1 <= b <= m
 
