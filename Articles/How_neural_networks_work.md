@@ -208,14 +208,16 @@ For what we have said above, f<sub>Cb</sub>(θ) = $(|f(xt_b, σ, θ) - yt_b|)^2$
 
 Recall that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases θ<sub>0</sub>.
 
-**N.B.** I anticipate that at the beginning of the algorithm, a feedforward will be performed, that is, we will execute the neural network f with input xt<sub>b</sub> = (xt<sub>b1</sub>, xt<sub>b2</sub>, ..., xt<sub>bn0</sub>) and with parameters θ<sub>0</sub> and we will save at each level l all the preactivation (a<sup>(l)</sup><sub>0</sub> = (a<sup>(l)</sup><sub>01</sub>, ..., a<sup>(l)</sup>,sub>0nl</sub>)) and activation (z<sup>(l)</sup><sub>0</sub> = (z<sup>(l)</sup><sub>01</sub>, ..., z<sup>(l)</sup><sub>0nl</sub>)) values, so we already know their (constant) values ​​for f with input xt<sub>b</sub> = (xt<sub>b1</sub>, xt<sub>b2</sub>, ..., xt<sub>bn0</sub>) and with parameters θ<sub>0</sub> (if we consider our combination, instead of f, then the a<sup>(l)</sup><sub>0</sub> and the z<sup>(l)</sup><sub>0</sub> are the values ​​that we encounter if we execute our combination with input xt<sub>b</sub> = (xt<sub>b1</sub>, xt<sub>b2</sub>, ..., xt<sub>bn0</sub>) (since it has already the parameters fixed on θ<sub>0</sub>)).
+**N.B.** I anticipate that at the beginning of the algorithm, a feedforward will be performed, that is, we will execute the neural network f with input xt<sub>b</sub> = (xt<sub>b1</sub>, xt<sub>b2</sub>, ..., xt<sub>bn0</sub>) and with parameters θ<sub>0</sub> and we will save at each level l all the preactivation (a<sup>(l)</sup><sub>0</sub> = (a<sup>(l)</sup><sub>01</sub>, ..., a<sup>(l)</sup>,sub>0nl</sub>)) and activation (z<sup>(l)</sup><sub>0</sub> = (z<sup>(l)</sup><sub>01</sub>, ..., z<sup>(l)</sup><sub>0nl</sub>)) values, so we already know their (constant) values ​​for f with input xt<sub>b</sub> = (xt<sub>b1</sub>, xt<sub>b2</sub>, ..., xt<sub>bn0</sub>) and with parameters θ<sub>0</sub> (if we consider our combination, instead of f, then the a<sup>(l)</sup><sub>0</sub> and the z<sup>(l)</sup><sub>0</sub> are the values ​​that we encounter if we execute our combination with input xt<sub>b</sub> = (xt<sub>b1</sub>, xt<sub>b2</sub>, ..., xt<sub>bn0</sub>) (since it has already the parameters fixed on θ<sub>0</sub>)).<br/><br/>
+
 
 Let's look at these functions in more detail, examining their component functions (remember that z<sup>(L)</sup> and a<sup>(L)</sup> are vector functions with x real variables and are therefore specified by means of component functions, while f<sub>Cb</sub> is a scalar function with multiple real variables and is therefore specified normally):
 
 <img align=left src="https://github.com/user-attachments/assets/20611455-5e1d-4aaa-a516-ac4ba748c652" width=1100>
 <BR CLEAR="all"><br/>
 
-**N.B.** I remind you that a matrix of the form **W<sub>0</sub><sup>(l)</sup>** is the (constant) matrix containing the weights of level l contained in the combination of weights and biases θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases θ<sub>0</sub>.
+**N.B.** I remind you that a matrix of the form **W<sub>0</sub><sup>(l)</sup>** is the (constant) matrix containing the weights of level l contained in the combination of weights and biases θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases θ<sub>0</sub>.<br/><br/>
+
 
 Given the property of combination of vector functions with real multiple vars, considering two vector functions f and g with real multiple vars:
 
@@ -226,4 +228,10 @@ Where $∇(f)(g(x_1, …,x_n))$ is equal to the gradient of $∇(f(t_1, …,t_k)
 $∇(f)(g(x_{01}, …, x_{0n})) = ∇(f)(g_1(x_{01}, …, x_{0n}),…, g_k (x_{01}, …, x_{0n})) =$ <br/>
 $= (f_{g_1(x_1,…,x_k)}′(g_1(x_{01}, …, x_{0n}),…, g_k(x_{01}, …, x_{0n})), …, f_{g_k (x_1,…,x_k)}′(g_1(x_{01}, …, x_{0n}),…, g_k(x_{01}, …, x_{0n})))$
 
-That is, the functions g<sub>1</sub>(x<sub>1</sub>, …, x<sub>n</sub>), …, g<sub>k</sub>(x<sub>1</sub>, …, x<sub>n</sub>) are considered as the independent variables of f &nbsp; (its graph therefore instead of the axes x<sub>1</sub>, ..., x<sub>n</sub> has axes g<sub>1</sub>(x<sub>1</sub>, …, x<sub>n</sub>), …, g<sub>k</sub>(x<sub>1</sub>, …, x<sub>n</sub>)).
+That is, the functions g<sub>1</sub>(x<sub>1</sub>, …, x<sub>n</sub>), …, g<sub>k</sub>(x<sub>1</sub>, …, x<sub>n</sub>) are considered as the independent variables of f &nbsp; (its graph therefore instead of the axes x<sub>1</sub>, ..., x<sub>n</sub> has axes g<sub>1</sub>(x<sub>1</sub>, …, x<sub>n</sub>), …, g<sub>k</sub>(x<sub>1</sub>, …, x<sub>n</sub>)).<br/><br/>
+
+
+So, if we assume **a<sup>(1)</sup>** (= a<sup>(1)</sup>(x<sub>1</sub>, ..., x<sub>n0</sub>) = (a<sup>(1)</sup><sub>1</sub>, ..., a<sup>(1)</sup><sub>n1</sub>) = (a<sup>(1)</sup><sub>1</sub>(x<sub>1</sub>, ..., x<sub>n0</sub>), ..., a<sup>(1)</sup><sub>n1</sub>(x<sub>1</sub>, ..., x<sub>n0</sub>))) as the independent variable of **f<sub>Cb</sub>** and the point **a<sup>(1)</sup><sub>0</sub>** which is the image of a<sup>(1)</sup> for x = x<sub>tb</sub> (and θ = θ<sub>0</sub>) (obtained via the initial feedforward), we get that the gradient of $f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)})))))))$ at the point a<sup>(1)</sup><sub>0</sub> is:
+
+<img align=left src="https://github.com/user-attachments/assets/da6bbce3-1962-4c4f-ac73-004c2e6e62c2" width=1200>
+<BR CLEAR="all"><br/>
