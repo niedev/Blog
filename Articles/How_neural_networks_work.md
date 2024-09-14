@@ -142,5 +142,16 @@ So it is very likely that if we find a local minimum point θ<sub>0</sub>, f<sub
 
 **N.B.** This explanation is informal because (as far as I know, after much research) a formal/mathematical demonstration of why the stochastic gradient works (and why it is more likely that the local minimum points have a low value) is still unknown. Many researches are investigating exactly this and there are many different directions from which this goal can be achieved, mine that I wrote above is only one, quite speculative, more or less like the others.
 
-To increase the efficiency (decrease the probability of getting stuck in a critical point), the speed of stochastic gradient descent and, in general, improve the training and behavior of neural networks, there are several other techniques to apply to gradient descent, for example, running the gradient descent multiple times starting from different points (or deciding on the optimal starting point), optimizations to parallelize it and run it on GPUs, stopping it when a certain value of the cost function is reached, optimizing the learning rate value (also dynamically based on the progress of the descent), changing the type of cost function, etc.
+To increase the efficiency (decrease the probability of getting stuck in a critical point), the speed of stochastic gradient descent and, in general, improve the training and behavior of neural networks, there are several other techniques to apply to gradient descent, for example, running the gradient descent multiple times starting from different points (or deciding on the optimal starting point), optimizations to parallelize it and run it on GPUs, stopping it when a certain value of the cost function is reached, optimizing the learning rate value (also dynamically based on the progress of the descent), changing the type of cost function, etc.</br></br></br>
+
+
+### Backpropagation
+
+Now the hard part begins, if you want you can consider the backpropagation as a black box that, given the cost function f<sub>C</sub> and a point θ<sub>0</sub> of its domain returns the gradient of f<sub>C</sub> at the point θ<sub>0</sub> (which, as we have seen, will be used by stochastic gradient descent to train the neural network).
+
+But if you want to fully understand how a neural network works, let's see how the backpropagation works:
+
+To help understand the calculations I recommend keeping this scheme open in another window or another device while reading this explanation:
+
+
 
