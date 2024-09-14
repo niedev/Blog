@@ -153,5 +153,7 @@ But if you want to fully understand how a neural network works, let's see how th
 
 To help understand the calculations I recommend keeping this scheme open in another window or another device while reading this explanation:
 
+![image](https://github.com/user-attachments/assets/e13d39d3-07c7-4800-ab28-41f9b558b2bb)
+
 
 
