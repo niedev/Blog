@@ -158,3 +158,14 @@ To help understand the calculations I recommend keeping this scheme open in anot
 **Consider a feed forward network f(x, σ, θ): D x S<sub>σ</sub> x S<sub>θ</sub> -> C, a set T consisting of m pairs of the form (xt ∈ D, yt ∈ C), the set S<sub>θ</sub>, the cost function of f:**
 
 **f<sub>C</sub>: S<sub>θ</sub> -> R, &nbsp;&nbsp; with f<sub>C</sub>(θ) = $\frac{(|f(xt_1, σ, θ) - yt_1|)^2 + (|f(xt_2, σ, θ) - yt_2|)^2 +...+ (|f(xt_m, σ, θ) - yt_m|)^2}{m}$**
+
+**And a point θ<sub>0</sub> ∈ S<sub>θ</sub>, with:**
+
+![image](https://github.com/user-attachments/assets/5f89d263-10ff-4d40-aa55-100898428702)
+
+The variable θ ∈ S<sub>θ</sub> instead is:
+
+![image](https://github.com/user-attachments/assets/6e718cef-a2a5-4ae8-8960-fc9596b92d94)
+
+
+
