@@ -155,5 +155,6 @@ To help understand the calculations I recommend keeping this scheme open in anot
 
 ![image](https://github.com/user-attachments/assets/e13d39d3-07c7-4800-ab28-41f9b558b2bb)
 
+**Consider a feed forward network f(x, σ, θ): D x S<sub>σ</sub> x S<sub>θ</sub> -> C, a set T consisting of m pairs of the form (xt ∈ D, yt ∈ C), the set S<sub>θ</sub>, the cost function of f:**
 
-
+**f<sub>C</sub>: S<sub>θ</sub> -> R, &nbsp;&nbsp; with f<sub>C</sub>(θ) = $\frac{(|f(xt_1, σ, θ) - yt_1|)^2 + (|f(xt_2, σ, θ) - yt_2|)^2 +...+ (|f(xt_m, σ, θ) - yt_m|)^2}{m}$**
