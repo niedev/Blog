@@ -216,3 +216,13 @@ Let's look at these functions in more detail, examining their component function
 <BR CLEAR="all"><br/>
 
 **N.B.** I remind you that a matrix of the form **W<sub>0</sub><sup>(l)</sup>** is the (constant) matrix containing the weights of level l contained in the combination of weights and biases θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases θ<sub>0</sub>.
+
+Given the property of combination of vector functions with real multiple vars, considering two vector functions f and g with real multiple vars:
+
+$∇(f(g(x_{01}, …,x_{0n})))= ∇(f)(g(x_{01}, …,x_{0n})) ∗ ∇(g(x_{01}, …,x_{0n}))$
+
+Where $∇(f)(g(x_1, …,x_n))$ is equal to the gradient of $∇(f(t_1, …,t_k))$ with, once calculated, in place of t<sub>1</sub>, …, t<sub>k</sub> the component functions of g, i.e. g<sub>1</sub>(x<sub>01</sub>, …, x<sub>0n</sub>), …, g<sub>k</sub>(x<sub>01</sub>, …, x<sub>0n</sub>), in other words:
+
+$∇(f)(g(x_{01}, …, x_{0n})) = ∇(f)(g_1(x_{01}, …, x_{0n}),…, g_k (x_{01}, …, x_{0n})) = (f_{g_1(x_1,…,x_k)}′(g_1(x_{01}, …, x_{0n}),…, g_k(x_{01}, …, x_{0n})), …, f_{g_k (x_1,…,x_k)}′(g_1(x_{01}, …, x_{0n}),…, g_k(x_{01}, …, x_{0n})))$
+
+That is, the functions g<sub>1</sub>(x<sub>1</sub>, …, x<sub>n</sub>), …, g<sub>k</sub>(x<sub>1</sub>, …, x<sub>n</sub>) are considered as the independent variables of f &nbsp; (its graph therefore instead of the axes x<sub>1</sub>, ..., x<sub>n</sub> has axes g<sub>1</sub>(x<sub>1</sub>, …, x<sub>n</sub>), …, g<sub>k</sub>(x<sub>1</sub>, …, x<sub>n</sub>)).
