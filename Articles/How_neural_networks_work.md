@@ -167,5 +167,9 @@ The variable θ ∈ S<sub>θ</sub> instead is:
 
 ![image](https://github.com/user-attachments/assets/6e718cef-a2a5-4ae8-8960-fc9596b92d94)
 
+**N.B.** The point θ<sub>0</sub> and the variable θ are [k-tuples](https://en.wikipedia.org/wiki/Tuple#:~:text=In%20mathematics%2C%20a%20tuple%20is,is%20a%20non%2Dnegative%20integer.) (k is the number of total weights and biases of the neural network f).
+
+**N.B.** The point θ<sub>0</sub> is the point that will be used for the gradient descent, so we start from a random point θ<sub>0</sub>, we calculate the gradient of f<sub>C</sub> in θ<sub>0</sub>, we continue in the direction of the gradient modifying θ<sub>0</sub> accordingly, we recalculate the gradient in the new point θ<sub>0</sub>, we continue in this way until we arrive at a point θ<sub>0</sub> that is a local minimum (or global, but it is almost impossible) such that f<sub>C</sub>(θ<sub>0</sub>) is low enough.
+
 
 
