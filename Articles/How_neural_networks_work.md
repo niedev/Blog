@@ -307,3 +307,9 @@ Using the formula to calculate δ<sup>(l)</sup> we can prove the following equat
 Where I recall that **z^<sup>(l−1)</sup><sub>0</sub>** is one of the values ​​we find during the initial feedforward, which more precisely is the image of z<sup>(1−1)</sup> for x = xt<sub>b</sub> (and θ = θ<sub>0</sub>). And where ⨂ is the [tensor product](https://www.math3ma.com/blog/the-tensor-product-demystified) between two tuples, that is, the product that, given two tuples, produces a tuple such that each of its elements is the product of an element of the first tuple and an element of the second tuple, and so on for all combinations of 2 elements, one of the first tuple and one of the second.
 
 **N.B.** I also remember that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient).
+
+___
+
+#### Proof of the above equation:
+
+The first step of this equation in practice is the application of the chain rule, since we consider $`f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (W^{(l)}))))))))`$ as the combination of $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)}(t)))))))`$ and $`a^{(l)} (W^{(l)})`$, so $`t = a^{(l)} (W^{(l)})`$.
