@@ -270,7 +270,7 @@ So, if we consider **a<sup>(1)</sup>** (= a<sup>(1)</sup>(x<sub>1</sub>, ..., x<
 **So, substituting the gradients according to the formulas we found, we can rewrite the above equation as:**
 
 <img align=left src="https://github.com/user-attachments/assets/5a48f5d7-3dc2-43c2-8637-de9b911a6c43" width=1200>
-<BR CLEAR="all">
+<BR CLEAR="all"><br/>
 
 The first multiplication produces a vector of length nL, the second a vector of length nL-1, the third a vector of length nL-1, the fourth a vector of length nL-2, ..., the penultimate a vector of length n1, the last a vector of length n0.
 
@@ -278,3 +278,10 @@ Here, under each gradient formula, above we have described how the computer deri
 
 **N.B.** I remember that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sup>0</sup> (i.e. the point whose gradient we want to calculate). <br/><br/>
 
+
+Since $`∇(z^{(l)})(a^{(l)} (z^{(l−1)} (a^{(l−1)} (…(z^{(1)} (a^{(1)}_0))))))`$ is always a square diagonal matrix of size nl x nl, and, analyzing what we wrote above, it is always multiplied by a vector (or tuple) of length nl, by this property, we can rewrite it as a vector and always multiply it by the Hadamard product, so in general, we can rewrite the above equation as:
+
+<img align=left src="https://github.com/user-attachments/assets/800a0430-779b-4e05-a1ce-96d4aba3933a" width=1200>
+<BR CLEAR="all"><br/>
+
+**N.B.** This rewriting is useful because it saves space and time for the computer during the execution of the algorithm.
