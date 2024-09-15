@@ -313,3 +313,5 @@ ___
 #### Proof of the above equation:
 
 The first step of this equation in practice is the application of the chain rule, since we consider $`f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (W^{(l)}))))))))`$ as the combination of $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)}(t)))))))`$ and $`a^{(l)} (W^{(l)})`$, so $`t = a^{(l)} (W^{(l)})`$.
+
+
