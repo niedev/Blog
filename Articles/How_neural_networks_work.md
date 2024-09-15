@@ -234,7 +234,8 @@ That is, the functions g<sub>1</sub>(x<sub>1</sub>, …, x<sub>n</sub>), …, g<
 So, if we consider **a<sup>(1)</sup>** (= a<sup>(1)</sup>(x<sub>1</sub>, ..., x<sub>n0</sub>) = (a<sup>(1)</sup><sub>1</sub>, ..., a<sup>(1)</sup><sub>n1</sub>) = (a<sup>(1)</sup><sub>1</sub>(x<sub>1</sub>, ..., x<sub>n0</sub>), ..., a<sup>(1)</sup><sub>n1</sub>(x<sub>1</sub>, ..., x<sub>n0</sub>))) as the independent variable of **f<sub>Cb</sub>** and the point **a<sup>(1)</sup><sub>0</sub>** which is the image of a<sup>(1)</sup> for x = x<sub>tb</sub> (and θ = θ<sub>0</sub>) (obtained via the initial feedforward), we get that the gradient of $f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)})))))))$ at the point a<sup>(1)</sup><sub>0</sub> is:
 
 <img align=left src="https://github.com/user-attachments/assets/da6bbce3-1962-4c4f-ac73-004c2e6e62c2" width=1200>
-<BR CLEAR="all"><br/>
+<BR CLEAR="all"><br/><br/>
+
 
 **Now let's see what each gradient is equal to** (we calculate the gradient of the individual functions of the composition, not of the entire composition, therefore considering the variables internal to the composition as an independent variable, at the notational level the difference is that in the case of the gradient of the entire composition the gradient symbol includes the entire composition, while, in the case of the gradient of only one of the functions of the composition, the gradient symbol includes only the law of the function whose gradient we want to calculate)**:**
 
@@ -264,4 +265,16 @@ So, if we consider **a<sup>(1)</sup>** (= a<sup>(1)</sup>(x<sub>1</sub>, ..., x<
 
   This matrix is ​​known a priori, since its values ​​are components of θ<sub>0</sub> (which is already known, being the point whose gradient we want to calculate).
 
-  **N.B.** I remind you that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate).
+  **N.B.** I remind you that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate). <br/><br/>
+
+**So, substituting the gradients according to the formulas we found, we can rewrite the above equation as:**
+
+<img align=left src="https://github.com/user-attachments/assets/5a48f5d7-3dc2-43c2-8637-de9b911a6c43" width=1200>
+<BR CLEAR="all">
+
+The first multiplication produces a vector of length nL, the second a vector of length nL-1, the third a vector of length nL-1, the fourth a vector of length nL-2, ..., the penultimate a vector of length n1, the last a vector of length n0.
+
+Here, under each gradient formula, above we have described how the computer derives each term of the expression above. It is also important to know that this expression is made up only of constants, so it produces a constant.
+
+**N.B.** I remember that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sup>0</sup> (i.e. the point whose gradient we want to calculate). <br/><br/>
+
