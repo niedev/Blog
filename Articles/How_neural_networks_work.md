@@ -279,9 +279,17 @@ Here, under each gradient formula, above we have described how the computer deri
 **N.B.** I remember that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sup>0</sup> (i.e. the point whose gradient we want to calculate). <br/><br/>
 
 
-Since $`∇(z^{(l)})(a^{(l)} (z^{(l−1)} (a^{(l−1)} (…(z^{(1)} (a^{(1)}_0))))))`$ is always a square diagonal matrix of size nl x nl, and, analyzing what we wrote above, it is always multiplied by a vector (or tuple) of length nl, by this property, we can rewrite it as a vector and always multiply it by the Hadamard product, so in general, we can rewrite the above equation as:
+Since $`∇(z^{(l)})(a^{(l)} (z^{(l−1)} (a^{(l−1)} (…(z^{(1)} (a^{(1)}_0))))))`$ is always a square diagonal matrix of size nl x nl, and, analyzing what we wrote above, it is always multiplied by a vector (or tuple) of length nl, by this property, we can rewrite it as a vector and always multiply it by the [Hadamard product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices)), so in general, we can rewrite the above equation as:
 
 <img align=left src="https://github.com/user-attachments/assets/800a0430-779b-4e05-a1ce-96d4aba3933a" width=1200>
 <BR CLEAR="all"><br/>
 
-**N.B.** This rewriting is useful because it saves space and time for the computer during the execution of the algorithm.
+**N.B.** This rewriting is useful because it saves space and time for the computer during the execution of the algorithm. <br/><br/>
+
+
+**Based on this we can then write the formula to calculate the constants δ<sup>(l)</sup>:**
+
+<img align=left src="https://github.com/user-attachments/assets/f0d11d0f-f3ad-45f4-9f15-476ca0442358" width=1200>
+<BR CLEAR="all"><br/>
+
+Recall that **δ<sup>(l)</sup>** is a constant vector (or tuple) of length nl, which we denote with: **(δ<sup>(l)</sup><sub>1</sub>, δ<sup>(l)</sup><sub>2</sub>, …, δ<sup>(l)</sup><sub>nl</sub>)**
