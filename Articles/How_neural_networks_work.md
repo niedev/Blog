@@ -235,3 +235,14 @@ So, if we consider **a<sup>(1)</sup>** (= a<sup>(1)</sup>(x<sub>1</sub>, ..., x<
 
 <img align=left src="https://github.com/user-attachments/assets/da6bbce3-1962-4c4f-ac73-004c2e6e62c2" width=1200>
 <BR CLEAR="all"><br/>
+
+**Now let's see what each gradient is equal to** (we calculate the gradient of the individual functions of the composition, not of the entire composition, therefore considering the variables internal to the composition as an independent variable, at the notational level the difference is that in the case of the gradient of the entire composition the gradient symbol includes the entire composition, while, in the case of the gradient of only one of the functions of the composition, the gradient symbol includes only the law of the function whose gradient we want to calculate)**:**
+
+- According to the definition of gradient of a scalar function with so many real variables at a point (the point is a<sup>(1)</sup><sub>0</sub>):
+  <img align=left src="https://github.com/user-attachments/assets/d081e6b4-5b6d-4635-93ce-d9d4e7d45926" width=900>
+  <BR CLEAR="all"><br/>
+  Instead of ... in the last expression we have $a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)}_0)))))$, given the definition of $a^{(1)}_0, a^{(1)}_0 = a^{(1)} (xt_{b1}, …,xt_{bn_0})$, then, for any i between 1 and nL: $z^{(L)}_i (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)}_0)))))) =$
+  $z^{(L)}_i (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)} (xt_{b1}, …,xt_{bn_0})))))))$, which is the image of $z^{(L)}_i$ for x = xt<sub>b</sub> (and θ = θ<sub>0</sub>) (constant), which we denote with $z^{(L)}_{0i}$ (which coincides with the notation we used for $a^{(1)}_0$ in fact it is one of the values ​​we save with the initial feedforward), so we substitute it in the last expression, obtaining:
+
+
+
