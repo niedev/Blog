@@ -257,4 +257,11 @@ So, if we consider **a<sup>(1)</sup>** (= a<sup>(1)</sup>(x<sub>1</sub>, ..., x<
 
   Here too the derivative of σ is known a priori, so the computer, to obtain the last matrix of the above equality, only has to calculate its image for the constant values ​​a<sup>(l)</sup><sub>01</sub>, ..., a<sup>(l)</sup><sub>0nl</sub> that it saved in the first forward pass.
 
+- We can calculate the gradient of any a<sup>(l)</sup> (i.e. of the a of any level l) at the point a<sup>(1)</sup><sub>0</sub> by applying the same principles as the result above:
 
+  <img align=left src="https://github.com/user-attachments/assets/5232226d-0900-460a-a10c-42a73da863ea" width=1100>
+  <BR CLEAR="all">
+
+  This matrix is ​​known a priori, since its values ​​are components of θ<sub>0</sub> (which is already known, being the point whose gradient we want to calculate).
+
+  **N.B.** I remind you that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate).
