@@ -296,4 +296,4 @@ Recall that **δ<sup>(l)</sup>** is a constant vector (or tuple) of length nl, w
 
 #### Point 2:
 
-
+Now, let's consider the function $`f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (W^{(l)})))))))))`$, that is, the function equal to this one but that instead of the function z<sup>(l+1)</sup> (which depends on the inputs x = (x<sub>1</sub>, ..., x<sub>n0</sub>)) has the independent variable W^{(l)}, more precisely the function a<sup>(l)</sup> has instead of the constant W<sub>0</sub><sup>(l)</sup> the independent variable W<sup>(l)</sup> and instead of the variable z^{(l−1)} (a^{(L−1)} (…(z^{(1)}(a^{(1)} (x_1, …, x_{n_0} ))))) has the constant z<sup>(l-1)</sup><sub>0</sub> obtained via the initial feedforward (b<sub>0</sub><sup>(l)</sup> remains the same), in symbols:
