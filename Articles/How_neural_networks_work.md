@@ -357,3 +357,13 @@ Now let us consider a partial derivative of f<sub>Cb</sub>(θ) at the point θ<s
 **N.B.** The modification of the parameter $`W^{(l)}_{i,j}`$ does not modify in any way the other parameters of the neural network, these values ​​are always independent of each other, it only affects the final value of all the levels between l and L (I do not know if this reflection has any relevance but I specify it anyway).
 
 Given the [EQ. 2-1] and [EQ. 2-2], we can substitute the tuple $`((f_{Cb})′_{W^{(l)}_{1,1}} (θ_0), (f_{Cb})′_{W^{(l)}_{1,2}} (θ_0), …, (f_{Cb})′_{W^{(l)}_{nl,nl−1}} (θ_0))`$ for the third term of this equation, obtaining (considering only some of the terms of [EQ. 2-1]):
+
+<img align=left src="https://github.com/user-attachments/assets/2e36d94c-e823-4fc8-adc1-8162e26dd024" width=950>
+<BR CLEAR="all"><br/>
+
+So, by the definition of equality between tuples, since the first and third terms are equal, their respective components are also equal, consequently we can say that:
+
+<img align=left src="https://github.com/user-attachments/assets/6dc8aa6f-1c55-4846-956a-53fc40bbe545" width=250>
+<BR CLEAR="all"><br/>
+
+#### Point 3:
