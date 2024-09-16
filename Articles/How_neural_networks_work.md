@@ -322,3 +322,8 @@ Now instead we prove that $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1
 
 <img align=left src="https://github.com/user-attachments/assets/92011f1c-cc9c-4714-9064-2a8c64b50d82" width=1200>
 <BR CLEAR="all"><br/>
+
+I recall that the $`z^{(l−1)}_{0i}`$ and the $`b_0^{(l)}_j`$ are constants, while the $`W^{(l)}_{i,j}`$ are the independent variables, moreover, for the same concepts seen here:
+
+<img align=left src="https://github.com/user-attachments/assets/b2909672-4e81-47e8-8a43-33ec3e545221" width=900>
+<BR CLEAR="all"><br/>
