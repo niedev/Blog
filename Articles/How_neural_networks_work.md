@@ -312,6 +312,6 @@ ___
 
 #### Proof of the above equation:
 
-The first step of this equation in practice is the application of the chain rule, since we consider $`f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (W^{(l)}))))))))`$ as the combination of $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)}(t)))))))`$ and $`a^{(l)} (W^{(l)})`$, so $`t = a^{(l)} (W^{(l)})`$.
+The first step of this equation in practice is the application of the chain rule, since we consider $`f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (W^{(l)}))))))))`$ as the combination of $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)}(t)))))))`$ and $`a^{(l)} (W^{(l)})`$, with therefore $`t = a^{(l)} (W^{(l)})`$.
 
-
+So, since we have proved the first step, now we only need to prove the second step, to do that we need to prove that $`a^{(l)}_0 = a^{(l)} (W_0^{(l)})`$ and that $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)}_0)))))))) ∗ ∇a^{(l)} (W_0^{(l)}) = δ^{(l)} ⨂ z^{(l−1)}_0`$:
