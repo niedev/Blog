@@ -329,8 +329,12 @@ I recall that the $`z^{(l−1)}_{0i}`$ and the $`{b_0}^{(l)}_{j}`$ are constants
 
 The matrix produced is a band matrix of height nl.
 
-At this point given that by the definition of δ<sup>(l)</sup>: $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)}_0))))))))`$ = $`δ^{(l)}`$ = $`(δ^{(l)}_1, δ^{(l)}_2,…, δ^{(l)}_{nl})`$ = $`[δ^{(l)}_1 \, δ^{(l)}_2 … δ^{(l)}_{nl}]`$ (1 x nl matrix), considering the definition of [scalar product](https://en.wikipedia.org/wiki/Dot_product), [matrix product](https://en.wikipedia.org/wiki/Matrix_multiplication#:~:text=For%20matrix%20multiplication%2C%20the%20number,B%20is%20denoted%20as%20AB.) and [tensor product](https://www.math3ma.com/blog/the-tensor-product-demystified):
+At this point given that by the definition of δ<sup>(l)</sup>: $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)}_0))))))))`$ = $`δ^{(l)}`$ = $`(δ^{(l)}_1, δ^{(l)}_2,…, δ^{(l)}_{nl})`$ = $`[δ^{(l)}_1 \, δ^{(l)}_2 … δ^{(l)}_{nl}]`$ (1 x nl matrix), considering the definition of [scalar product](https://en.wikipedia.org/wiki/Dot_product), [matrix product](https://en.wikipedia.org/wiki/Matrix_multiplication#:~:text=For%20matrix%20multiplication%2C%20the%20number,B%20is%20denoted%20as%20AB.) and [tensor product](https://www.math3ma.com/blog/the-tensor-product-demystified) (⨂):
 
-<img align=left src="https://github.com/user-attachments/assets/2d2b19a5-06c9-4f0a-91c5-c400fda5b7fe" width=880>
+<img align=left src="https://github.com/user-attachments/assets/2d2b19a5-06c9-4f0a-91c5-c400fda5b7fe" width=900>
 <BR CLEAR="all"><br/>
+
+So we have proved that: $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} ({W_0}^{(l)}))))))))`$ = $`δ^{(l)} ⨂ z^{(l−1)}_0`$ , so we have proved the above equation.
+
+___
 
