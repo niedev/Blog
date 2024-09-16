@@ -340,4 +340,8 @@ ___
 
 Now, using the above equation, we derive a formula for the partial derivatives of f<sub>Cb</sub> with respect to each weight of a level l, i.e. this formula, to do so we first consider the definition of the gradient as a tuple of partial derivatives, the above equation and denote (to simplify the notation) the function $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} ({W_0}^{(l)}))))))))`$ with the symbol $`h(W_0^{(l)})`$:
 
+<img align=left src="https://github.com/user-attachments/assets/1fb74db4-1e3c-4d73-a91e-6c67bc1dfcbd" width=900>
+<BR CLEAR="all"><br/>
+
+Now let's consider the initial function f<sub>Cb</sub>, that is the function f<sub>Cb</sub>: S<sub>θ</sub> -> R, with $`f_{Cb}(θ) = (f(xt_b, σ, θ) − yt_b)^2`$, where therefore the activation function σ and the input xtb are constants, while all the weights and biases are variables (θ), this function can also be written through our initial composite function modified so that it has as independent variable θ and instead of the variable x the constant xt<sub>b</sub>, that is as the function $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)}(θ)))))))`$.
 
