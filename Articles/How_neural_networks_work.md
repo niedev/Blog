@@ -412,7 +412,7 @@ In this case the $`z^{(l−1)}_{0i}`$ and the $`{W_0}^{(l)}_{i,j}`$ are constant
 
 The matrix produced is a square matrix of height nl and width nl.
 
-At this point given that by the definition of δ<sup>(l)</sup>: $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)}_0))))))))`$ = $`δ^{(l)}`$ = $`(δ^{(l)}_1, δ^{(l)}_2,…, δ^{(l)}_{nl})`$ = $`[δ^{(l)}_1 \, δ^{(l)}_2 … δ^{(l)}_{nl}]`$, furthermore by this property:
+At this point given that by the definition of δ<sup>(l)</sup>: $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)}_0))))))))`$ = $`δ^{(l)}`$ = $`(δ^{(l)}_1, δ^{(l)}_2,…, δ^{(l)}_{nl})`$ = $`[δ^{(l)}_1 \, δ^{(l)}_2 … δ^{(l)}_{nl}]`$, furthermore by [this property](https://solitaryroad.com/c108.html):
 
 <img align=left src="https://github.com/user-attachments/assets/0f0111a6-841b-451f-977f-ced43e1c61ad" width=800>
 <BR CLEAR="all"><br/>
