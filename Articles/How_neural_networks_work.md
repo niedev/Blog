@@ -367,3 +367,18 @@ So, by the definition of equality between tuples, since the first and third term
 <BR CLEAR="all"><br/>
 
 #### Point 3:
+
+In point 3) we will use the same principles as in point 2) to compute the partial derivatives with respect to each bias (instead of each weight) of level l: (f<sub>Cb</sub>)'<sub>b<sup>(l)</sup><sub>i</sub></sub>(θ<sub>0</sub>).
+
+I remind you of the definition of **δ<sup>(l)</sup>**:
+
+<img align=left src="https://github.com/user-attachments/assets/f0d11d0f-f3ad-45f4-9f15-476ca0442358" width=1200>
+<BR CLEAR="all"><br/>
+
+Recall that **δ<sup>(l)</sup>** is a constant vector (or tuple) of length nl, which we denote with: **(δ<sup>(l)</sup><sub>1</sub>, δ<sup>(l)</sup><sub>2</sub>, …, δ<sup>(l)</sup><sub>nl</sub>)**<br/><br/>
+
+
+Now, let's consider the function $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (b^{(l)})))))))))`$, that is, the function equal to this one but that instead of the function z<sup>(l+1)</sup> (which depends on the inputs x = (x<sub>1</sub>, ..., x<sub>n0</sub>)) has the independent variable b<sup>(l)</sup>, more precisely the function a<sup>(l)</sup> has instead of the constant b<sub>0</sub><sup>(l)</sup> the independent variable b<sup>(l)</sup> and instead of the variable $`z^{(l−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)} (x_1, …, x_{n_0})))))`$ has the constant z<sup>(l-1)</sup><sub>0</sub> obtained by the initial feedforward (W<sub>0</sub><sup>(l)</sup> remains the same), in symbols: <br/>
+$`a^{(l)} (b^{(l)}) = W_0^{(l)} ∗ z^{(l−1)}_0 + b^{(l)}`$
+
+
