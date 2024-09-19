@@ -474,7 +474,7 @@ Now to simplify the calculations let's consider a series of cost functions, one 
 
 For the [definition of gradient](https://en.wikipedia.org/wiki/Gradient) and the properties of gradient:
 
-<img align=left src="https://github.com/user-attachments/assets/ac8b222d-3075-446a-9d6d-9e66bd7e23cf" width=600/>
+<img align=left src="https://github.com/user-attachments/assets/ac8b222d-3075-446a-9d6d-9e66bd7e23cf" width=600/> [EQ. a]
 <BR CLEAR="all"><br/>
 
 
@@ -506,3 +506,9 @@ For each training example (element xt<sub>b</sub> ∈ T):
 - Then, for each **W<sup>(l)</sup><sub>i,j</sub>** we use [EQ. 2] ($`δ^{(l)}_i ∗ z^{(l−1)}_{0j}`$) to compute **(f<sub>Cb</sub>)′<sub>W<sup>(l)</sup><sub>i,j</sub></sub> (θ<sub>0</sub>)** (the value $`z^{(l−1)}_{0j}`$ was saved during feedforward) and save it in a vector of length |θ<sub>0</sub>| = k called **gradient<sub>b</sub>**.
 
 - For each **b<sup>(l)</sup><sub>i</sub>** we use [EQ. 3] ($`δ^{(l)}_i`$) to calculate **(f<sub>Cb</sub>)′<sub>b<sup>(l)</sup><sub>i</sub></sub> (θ<sub>0</sub>)** and save it in **gradient<sub>b</sub>**.
+
+At this point, each **gradient<sub>b</sub>** contains all and only the components of the gradient **∇f<sub>Cb</sub>(θ<sub>0</sub>)** and we have a **gradient<sub>b</sub>** for each element xt<sub>b</sub> ∈ T.
+
+Then we apply [EQ. a] to obtain the gradient **∇f<sub>C</sub>(θ<sub>0</sub>)**, and we are done.
+
+**N.B.** b<sub>(l)</sub> is the vector of the biases of the level l, b instead is just a natural number between 1 and m, they have nothing to do with each other.
