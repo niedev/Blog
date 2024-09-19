@@ -382,3 +382,17 @@ Now, let's consider the function $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L�
 $`a^{(l)} (b^{(l)}) = W_0^{(l)} ∗ z^{(l−1)}_0 + b^{(l)}`$
 
 Using the formula to calculate δ<sup>(l)</sup> we can prove the following equation, which finds **the gradient of the function $`f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (b^{(l)})))))))))`$**, which we defined above, **at the point b<sub>0</sub><sup>(l)</sup>** (which will lead us to the final equation of point 3, to find $`(f_{Cb})_{b^{(l)}_i} (θ_0)`$ knowing only $`δ^{(l)}_i`$):
+
+<img align=left src="https://github.com/user-attachments/assets/d2f19b1f-a3df-49d5-bcd4-a5a4da66d6e2" width=1200>
+<BR CLEAR="all"><br/>
+
+Where I recall that **z<sup>(l−1)</sup><sub>0</sub>** is one of the values ​​we find during the initial feedforward, which more precisely is the image of z<sup>(l−1)</sup> for x = xt<sub>b</sub> (and θ = θ<sub>0</sub>).
+
+**N.B.** I also remember that a matrix of the form **W<sub>0</sub><sup>(l)</sup>** is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient) and a tuple of the form **b<sub>0</sub><sup>(l)</sup>** is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient).
+
+___
+
+#### Proof of the above equation:
+
+
+___
