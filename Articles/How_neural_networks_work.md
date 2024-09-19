@@ -497,3 +497,12 @@ Given also the final formulas found in points 1), 2) and 3):
 
 #### The algorithm is implemented like this:
 
+For each training example (element xt<sub>b</sub> ∈ T):
+
+- We perform a **feedforward**, that is, we will execute the neural network f with inputs xt<sub>b1</sub>, xt<sub>b2</sub>, ..., xt<sub>bn0</sub> and with parameters θ<sub>0</sub> and we save for each level l all the preactivation values ​​(a<sup>(l)</sup><sub>0</sub> = (a<sup>(l)</sup><sub>01</sub>, ..., a<sup>(l)</sup><sub>0nl</sub>)) and activation (z<sup>(l)</sup><sub>0</sub> = (z<sup>(l)</sup><sub>01</sub>, ..., z<sup>(l)</sup><sub>0nl</sub>)).
+
+- We calculate **δ<sup>(L)</sup>** using [EQ. 1] and save the result, which we recycle to calculate **δ<sup>(L−1)</sup>**, which we save, and use to calculate **δ<sup>(L−2)</sup>** and so on up to **δ<sup>(1)</sup>**.
+
+- Then, for each **W<sup>(l)</sup><sub>i,j</sub>** we use [EQ. 2] ($`δ^{(l)}_i ∗ z^{(l−1)}_{0j}`$) to compute **(f<sub>Cb</sub>)′<sub>W<sup>(l)</sup><sub>i,j</sub></sub> (θ<sub>0</sub>)** (the value $`z^{(l−1)}_{0j}`$ was saved during feedforward) and save it in a vector of length |θ<sub>0</sub>| = k called **gradient<sub>b</sub>**.
+
+- For each **b<sup>(l)</sup><sub>i</sub>** we use [EQ. 3] ($`δ^{(l)}_i`$) to calculate **(f<sub>Cb</sub>)′<sub>b<sup>(l)</sup><sub>i</sub></sub> (θ<sub>0</sub>)** and save it in **gradient<sub>b</sub>**.
