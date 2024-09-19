@@ -338,7 +338,7 @@ So we have proved that: $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)}
 
 ___
 
-Now, using the above equation, we derive a formula for the partial derivatives of f<sub>Cb</sub> with respect to each weight of a level l, i.e. this formula, to do so we first consider the definition of the gradient as a tuple of partial derivatives, the above equation and denote (to simplify the notation) the function $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} ({W_0}^{(l)}))))))))`$ with the symbol $`g(W_0^{(l)})`$:
+Now, using the above equation, we derive a formula for the partial derivatives of f<sub>Cb</sub> with respect to each weight of a level l, i.e. the final formula of this point, to do so we first consider the definition of the gradient as a tuple of partial derivatives, the above equation and denote (to simplify the notation) the function $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} ({W_0}^{(l)}))))))))`$ with the symbol $`g(W_0^{(l)})`$:
 
 <img align=left src="https://github.com/user-attachments/assets/1fb74db4-1e3c-4d73-a91e-6c67bc1dfcbd" width=900>
 [EQ. 2-1]
@@ -419,3 +419,16 @@ At this point given that by the definition of δ<sup>(l)</sup>: $`∇(f_{Cb} (z^
 
 So we have proved that $`∇(f_{Cb})(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (b^{(l)}))))))))`$ = $`(δ^{(l)}_1, δ^{(l)}_2,…, δ^{(l)}_{nl})`$ = $`δ^{(l)}`$, so we have proved the above equation.
 ___
+
+Now, using the above equation, we derive a formula for the partial derivatives of f<sub>Cb</sub> with respect to each bias of a level l, i.e. the final formula of this point, to do so we first consider the definition of the gradient as a tuple of partial derivatives, the above equation and denote (to simplify the notation) the function $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} ({b_0}^{(l)}))))))))`$ with the symbol $`h(b_0^{(l)})`$:
+
+<img align=left src="https://github.com/user-attachments/assets/de79b698-046d-4377-a3a2-66ce9598d1a6" width=800>
+[EQ. 3-1]
+<BR CLEAR="all"><br/>
+
+Applying the same principles seen for obtaining the [EQ.2-2], we get that:
+
+<img align=left src="https://github.com/user-attachments/assets/a11ff511-ee44-4232-9f72-c61dd5fdd9dd" width=500>
+[EQ. 3-2]
+<BR CLEAR="all"><br/>
+
