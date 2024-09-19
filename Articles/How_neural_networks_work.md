@@ -441,3 +441,59 @@ So, by the definition of equality between tuples, since the first and third term
 
 <img align=left src="https://github.com/user-attachments/assets/3c1528e8-ba93-4ac2-9937-d04bee4d27e1" width=180>
 <BR CLEAR="all"><br/>
+
+Now let's see how the backpropagation algorithm is implemented, which will use the formulas we have found up to this point to find the gradient of f<sub>C</sub> at the point θ<sub>0</sub>: <br/><br/>
+
+### Implementation of the backpropagation algorithm:
+
+Given the initial premises, which we rewrite below:
+
+**Consider a feed forward network f(x, σ, θ): D x S<sub>σ</sub> x S<sub>θ</sub> -> C, a set T consisting of m pairs of the form (xt ∈ D, yt ∈ C), the set S<sub>θ</sub>, the cost function of f:**
+
+**f<sub>C</sub>: S<sub>θ</sub> -> R, &nbsp;&nbsp; with f<sub>C</sub>(θ) = $\frac{(|f(xt_1, σ, θ) - yt_1|)^2 + (|f(xt_2, σ, θ) - yt_2|)^2 +...+ (|f(xt_m, σ, θ) - yt_m|)^2}{m}$**
+
+**And a point θ<sub>0</sub> ∈ S<sub>θ</sub>, with:**
+
+![image](https://github.com/user-attachments/assets/5f89d263-10ff-4d40-aa55-100898428702)
+
+The variable θ ∈ S<sub>θ</sub> instead is:
+
+![image](https://github.com/user-attachments/assets/6e718cef-a2a5-4ae8-8960-fc9596b92d94)
+
+**N.B.** The point θ<sub>0</sub> and the variable θ are [k-tuples](https://en.wikipedia.org/wiki/Tuple#:~:text=In%20mathematics%2C%20a%20tuple%20is,is%20a%20non%2Dnegative%20integer.) (k is the number of total weights and biases of the neural network f).
+
+**N.B.** The point θ<sub>0</sub> is the point that will be used for the gradient descent, so we start from a random point θ<sub>0</sub>, we calculate the gradient of f<sub>C</sub> in θ<sub>0</sub>, we continue in the direction of the gradient modifying θ<sub>0</sub> accordingly, we recalculate the gradient in the new point θ<sub>0</sub>, we continue in this way until we arrive at a point θ<sub>0</sub> that is a local minimum (or global, but it is almost impossible) such that f<sub>C</sub>(θ<sub>0</sub>) is low enough.
+
+I note that S<sub>θ</sub> can also be written as: S<sub>θ1</sub> x S<sub>θ2</sub> x ... x S<sub>θk</sub> where S<sub>θd</sub> (with 1 <= d <= k) is the membership set of the d-th component of θ.
+
+Now to simplify the calculations let's consider a series of cost functions, one for each element of T, more precisely let's consider m cost functions of the form:
+
+**f<sub>Cb</sub>: S<sub>θ</sub> -> R,  &nbsp;&nbsp; with f<sub>Cb</sub>(θ) = $\frac{(|f(xt_b, σ, θ) - yt_b|)^2}{1}$ = $(|f(xt_b, σ, θ) - yt_b|)^2$**, &nbsp;&nbsp; 1 <= b <= m
+
+**N.B.** b<sup>(l)</sup> is the bias vector of level l, while b is just a natural number between 1 and m, the two symbols have nothing to do with each other.
+
+For the [definition of gradient](https://en.wikipedia.org/wiki/Gradient) and the properties of gradient:
+
+<img align=left src="https://github.com/user-attachments/assets/ac8b222d-3075-446a-9d6d-9e66bd7e23cf" width=600/>
+<BR CLEAR="all"><br/>
+
+
+Given also the final formulas found in points 1), 2) and 3):
+
+[EQ. 1]:
+
+<img align=left src="https://github.com/user-attachments/assets/f0d11d0f-f3ad-45f4-9f15-476ca0442358" width=1200>
+<BR CLEAR="all"><br/>
+
+[EQ. 2]:
+
+<img align=left src="https://github.com/user-attachments/assets/6dc8aa6f-1c55-4846-956a-53fc40bbe545" width=250>
+<BR CLEAR="all"><br/>
+
+[EQ. 3]:
+
+<img align=left src="https://github.com/user-attachments/assets/3c1528e8-ba93-4ac2-9937-d04bee4d27e1" width=180>
+<BR CLEAR="all"><br/>
+
+#### The algorithm is implemented like this:
+
