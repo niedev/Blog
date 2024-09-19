@@ -394,5 +394,9 @@ ___
 
 #### Proof of the above equation:
 
+The first step of this equation in practice is the application of the chain rule, since we consider $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (b^{(l)}))))))))`$ as the combination of $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (t)))))))`$ and $`a^{(l)} (b^{(l)})`$, so $`t = a^{(l)} (b^{(l)})`$:
 
+So, since we have proved the first step, now we only have to prove that (since by the chain rule the first step of the equation is already proved) $`a^{(l)}_0 = a^{(l)} ({b_0}^{(l)})`$ and that $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)}_0)))))))) ∗ ∇a^{(l)} ({b_0}^{(l)}) = δ^{(l)}`$:
+
+We first prove that $`a^{(l)}_0 = a^{(l)} ({b_0}^{(l)})`$: By the definition of $`a^{(l)} (b^{(l)})`$, the latter is a function $`a^{(l)} (b^{(l)}) = W_0^{(l)} ∗ z^{(l−1)}_0 + b^{(l)}`$, but its image for b_0〗^((l) ) transforms the variable b(l) into the constant b0(l), so a^((l) ) (〖b_0〗^((l) ) )= 〖W_0〗^((l) )∗〖z^((l−1) )〗_0+〖b_0〗^((l) ) this image however coincides with the definition of a(l)0 (saved in the initial feedforward), since this constant is defined as the preactivation value of level l (a(l)0 = (a(l)01, ..., a(l)0nl)) of this combination with input xtb = (xtb1, xtb2, ..., xtbn0) (it already has the parameters fixed on θ0), that is, given the definition of a(l) (which coincides with this one but with l instead of L), a(l)0 = 〖W_0〗^((l) )∗z^((l−1) ) (a^((L−1) ) (…(z^((1) ) (a^((1) ) (〖xt〗_b1, …, 〖xt〗_(bn_0 ) )))))+〖b_0〗^((l) ), and since, by the definition of z(l-1)0 (also one of the values ​​saved in the initial feedforward), z(l-1)0 = z^((l−1) ) (a^((L−1) ) (…(z^((1) ) (a^((1) ) (〖xt〗_b1, …, 〖xt〗_(bn_0 ) ))))), then a(l)0 = 〖W_0〗^((l) )∗z^((l−1) ) (a^((L−1) ) (…(z^((1) ) (a^((1) ) (〖xt〗_b1, …, 〖xt〗_(bn_0 ) )))))+〖b_0〗^((l) ) = 〖W_0〗^((l) )∗〖z^((l−1) )〗_0+〖b_0〗^((l) ), so 〖a^((l) )〗_0=a ^((l) ) (〖b_0〗^((l) ) ).
 ___
