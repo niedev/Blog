@@ -432,3 +432,12 @@ Applying the same principles seen for obtaining the [EQ.2-2], we get that:
 [EQ. 3-2]
 <BR CLEAR="all"><br/>
 
+Given the [EQ. 3-1] and [EQ. 3-2], we can substitute the tuple $`((f_{Cb})′_{b^{(l)}_{1}} (θ_0), …, (f_{Cb})′_{b^{(l)}_{nl}} (θ_0))`$ for the third term of this equation, obtaining (considering only some of the terms of [EQ. 3-1]):
+
+<img align=left src="https://github.com/user-attachments/assets/9844638a-2995-4c80-bcb5-7be801123fe1" width=480>
+<BR CLEAR="all"><br/>
+
+So, by the definition of equality between tuples, since the first and third terms are equal, their respective components are also equal, consequently we can say that:
+
+<img align=left src="https://github.com/user-attachments/assets/3c1528e8-ba93-4ac2-9937-d04bee4d27e1" width=180>
+<BR CLEAR="all"><br/>
