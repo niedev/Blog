@@ -21,7 +21,9 @@ Given a real function of real var **σ**, called the **activation function**, n 
 An **artificial neuron** (or simply **neuron**) is a [scalar function of n real variables](https://en.wikipedia.org/wiki/Function_of_several_real_variables) that receives as input n real values **​​x<sub>1</sub>**, **​​x<sub>2</sub>**, ..., **​​x<sub>n</sub>**, and produces a real value equal to the image, in σ, of the sum of ​​x<sub>1</sub>, ​​x<sub>2</sub>, ..., ​​x<sub>n</sub>, with each x<sub>i</sub> multiplied by the weight W<sub>i</sub>, and with b also added.</br>
 Formally, given the premises above, an artificial neuron is the function specified as follows:
 
-**neuron: D<sub>1</sub> x D<sub>2</sub> x ... x D<sub>n</sub> --> R, &nbsp;&nbsp;&nbsp;&nbsp; neuron(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>)  =  σ(b + W<sub>1</sub> * x<sub>1</sub> + W<sub>2</sub> * x<sub>2</sub> +...+ W<sub>n</sub> * x<sub>n</sub>)** </br></br>
+**neuron: D<sub>1</sub> x D<sub>2</sub> x ... x D<sub>n</sub> --> R, &nbsp;&nbsp;&nbsp;&nbsp; neuron(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>)  =  σ(b + W<sub>1</sub> * x<sub>1</sub> + W<sub>2</sub> * x<sub>2</sub> +...+ W<sub>n</sub> * x<sub>n</sub>)**
+
+**N.B.** We'll find out later what exactly weights and biases are for.</br></br>
 
 #### Artificial vs biological neurons:
 
@@ -39,18 +41,37 @@ Artificial neurons are inspired by biological ones, they are a simpler represent
 <img align="right" width="500" src="https://github.com/user-attachments/assets/672c2d81-e487-4344-85ef-c232b4f19b87">
 
 </br></br>
-The network is divided into levels (L in total), each level l is formed by n<sub>l</sub> neurons, the i-th neuron (starting from the top, see figure below) of the l-th level (starting from the left, see figure below) is indicated with: **neuron<sub>i</sub><sup>(l)</sup>**.
+The network is divided into levels (L in total), each level l is formed by n<sub>l</sub> neurons, the i-th neuron (starting from the top, see figure above) of the l-th level (starting from the left, see figure above) is indicated with: **neuron<sub>i</sub><sup>(l)</sup>**.
 
-The set **θ** is a set containing L matrices and L tuples, a matrix and a tuple for each level, with the matrix of the l-th level, indicated with **W<sup>(l)</sup>**, which contains in the i-th row the **weights** of the i-th neuron of the l-th level and the tuple of the l-th level, indicated with **b<sup>(l)</sup>** which contains in the i-th element the **bias** of the i-th neuron of the l-th level.</br>
+The set **θ** is a set containing L matrices and L tuples, a matrix and a tuple for each level, with:
+- The matrix of the l-th level, indicated with **W<sup>(l)</sup>**, which contains, in the i-th row, the **weights** of the i-th neuron of the l-th level.
+- The tuple of the l-th level, indicated with **b<sup>(l)</sup>** which contains in the i-th element the **bias** of the i-th neuron of the l-th level.</br>
+
 In reality, even if we have defined θ as a set of matrices and tuples, this is a simplification, the structure of θ is different, in fact this set does not contain the matrices and tuples, but directly all the elements of the matrices and tuples, ordered in a certain way (the first elements are those of W<sup>(1)</sup>, ordered from the first element of the first column of W<sup>(1)</sup>, to the last element of the last column of W<sup>(1)</sup>, then there are the elements of b<sup>(1)</sup> (ordered as they are ordered in b<sup>(1)</sup>), then the elements of W<sup>(2)</sup>, b<sup>(2)</sup>, ..., up to the elements of W<sup>(L)</sup>, b<sup>(L)</sup>) from which matrices and tuples can be easily specified.
 
-The first level is formed by n<sub>1</sub> neurons and each neuron among these, indicated by **neuron<sub>i</sub><sup>(1)</sup>**, has as input the inputs x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n0</sub> of f, as weights the elements of the i-th column of W<sup>(1)</sup> and as bias the i-th element of b<sup>(1)</sup>.
+The first level is formed by n<sub>1</sub> neurons and each neuron among these, indicated by **neuron<sub>i</sub><sup>(1)</sup>**, has:
+- As input the inputs x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n0</sub> of f.
+- As weights the elements of the i-th column of W<sup>(1)</sup>.
+- As bias the i-th element of b<sup>(1)</sup>.
 
-The second level is formed by n<sub>2</sub> neurons and each neuron among them, indicated by **neuron<sub>i</sub><sup>(2)</sup>**, has as input the outputs of all the neurons of the previous level (the first level), as weights the elements of the i-th column of W<sup>(2)</sup> and as bias the i-th element of b<sup>(2)</sup>.
+The second level is formed by n<sub>2</sub> neurons and each neuron among them, indicated by **neuron<sub>i</sub><sup>(2)</sup>**, has:
+- As input the outputs of all the neurons of the previous level (the first level).
+- As weights the elements of the i-th column of W<sup>(2)</sup>.
+- As bias the i-th element of b<sup>(2)</sup>.
 
-And so on up to the L-th (last) level, formed by n<sub>L</sub> neurons and each neuron among them, indicated by **neuron<sub>i</sub><sup>(L)</sup>**, has as input the outputs of all the neurons of the previous level (the L-1 level), as weights the elements of the i-th column of W<sup>(L)</sup> and as bias the i-th element of b<sup>(L)</sup>, the outputs of the neurons of this last level are the outputs y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub> of f, that is, of the neural network itself.
+And so on up to the L-th (last) level, formed by n<sub>L</sub> neurons and each neuron among them, indicated by **neuron<sub>i</sub><sup>(L)</sup>**, has:
+- As input the outputs of all the neurons of the previous level (the L-1 level).
+- As weights the elements of the i-th column of W<sup>(L)</sup>.
+- As bias the i-th element of b<sup>(L)</sup>.
 
-In general, therefore, the network is formed by L levels and each level l is formed by n<sub>l</sub> neurons and each neuron among these, indicated by **neuron<sub>i</sub><sup>(l)</sup>**, has as input the outputs of all the neurons of the previous level (unless l=1, in which case then the inputs are the inputs x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n0</sub> of f), as weights the elements of the i-th column of W<sup>(l)</sup> and as bias the i-th element of b<sup>(l)</sup>, the outputs of the neurons of the last level (l=L) are the outputs y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub> of f, that is, of the neural network itself.</br></br>
+The outputs of the neurons of this last level are the outputs y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub> of f, that is, of the neural network itself.
+
+In general, therefore, the network is formed by L levels and each level l is formed by n<sub>l</sub> neurons and each neuron among these, indicated by **neuron<sub>i</sub><sup>(l)</sup>**, has:
+- As input the outputs of all the neurons of the previous level (unless l=1, in which case then the inputs are the inputs x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n0</sub> of f)
+- As weights the elements of the i-th column of W<sup>(l)</sup>
+- As bias the i-th element of b<sup>(l)</sup>.
+
+The outputs of the neurons of the last level (l=L) are the outputs y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>nL</sub> of f, that is, of the neural network itself.</br></br>
 
 #### Definition with matrices:
 
