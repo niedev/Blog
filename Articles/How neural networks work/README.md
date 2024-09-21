@@ -176,7 +176,7 @@ To increase the efficiency (decrease the probability of getting stuck in a criti
 
 ### Backpropagation
 
-Now the hard part begins, if you want you can consider the backpropagation as a black box that, given the cost function f<sub>C</sub> and a point θ<sub>0</sub> of its domain returns the gradient of f<sub>C</sub> at the point θ<sub>0</sub> (which, as we have seen, will be used by stochastic gradient descent to train the neural network).
+Now the hard part begins. If you want you can consider the backpropagation as a black box that, given the cost function f<sub>C</sub> and a point θ<sub>0</sub> of its domain returns the gradient of f<sub>C</sub> at the point θ<sub>0</sub> (which, as we have seen, will be used by stochastic gradient descent to train the neural network).
 
 But if you want to fully understand how a neural network works, let's see how the backpropagation works:
 
@@ -198,7 +198,7 @@ The variable θ ∈ S<sub>θ</sub> instead is:
 
 **N.B.** The point θ<sub>0</sub> and the variable θ are [k-tuples](https://en.wikipedia.org/wiki/Tuple#:~:text=In%20mathematics%2C%20a%20tuple%20is,is%20a%20non%2Dnegative%20integer.) (k is the number of total weights and biases of the neural network f).
 
-**N.B.** The point θ<sub>0</sub> is the point that will be used for the gradient descent, so we start from a random point θ<sub>0</sub>, we calculate the gradient of f<sub>C</sub> in θ<sub>0</sub>, we continue in the direction of the gradient modifying θ<sub>0</sub> accordingly, we recalculate the gradient in the new point θ<sub>0</sub>, we continue in this way until we arrive at a point θ<sub>0</sub> that is a local minimum (or global, but it is almost impossible) such that f<sub>C</sub>(θ<sub>0</sub>) is low enough.
+**N.B.** The point θ<sub>0</sub> is the point that will be used for the gradient descent, so we start from a random point θ<sub>0</sub>, we calculate the gradient of f<sub>C</sub> in θ<sub>0</sub>, we continue in the direction of the gradient modifying θ<sub>0</sub> accordingly, we recalculate the gradient in the new point θ<sub>0</sub>. We continue in this way until we arrive at a point θ<sub>0</sub> that is a local minimum (or global, but it is almost impossible) such that f<sub>C</sub>(θ<sub>0</sub>) is low enough.
 
 I note that S<sub>θ</sub> can also be written as: S<sub>θ1</sub> x S<sub>θ2</sub> x ... x S<sub>θk</sub> where S<sub>θd</sub> (with 1 <= d <= k) is the membership set of the d-th component of θ.
 
