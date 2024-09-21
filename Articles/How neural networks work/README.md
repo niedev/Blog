@@ -302,9 +302,9 @@ So, if we consider **a<sup>(1)</sup>** (= a<sup>(1)</sup>(x<sub>1</sub>, ..., x<
 
 The first multiplication produces a vector of length nL, the second a vector of length nL-1, the third a vector of length nL-1, the fourth a vector of length nL-2, ..., the penultimate a vector of length n1, the last a vector of length n0.
 
-Here, under each gradient formula, above we have described how the computer derives each term of the expression above. It is also important to know that this expression is made up only of constants, so it produces a constant.
+It is also important to know that the expression above is made up only of constants, so it produces a constant.
 
-**N.B.** I remember that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sup>0</sup> (i.e. the point whose gradient we want to calculate). <br/><br/>
+**N.B.** I remind you that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point whose gradient we want to calculate) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sup>0</sup> (i.e. the point whose gradient we want to calculate). <br/><br/>
 
 
 Since $`∇(z^{(l)})(a^{(l)} (z^{(l−1)} (a^{(l−1)} (…(z^{(1)} (a^{(1)}_0))))))`$ is always a square diagonal matrix of size nl x nl, and, analyzing what we wrote above, it is always multiplied by a vector (or tuple) of length nl, by this property, we can rewrite it as a vector and always multiply it by the [Hadamard product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices)), so in general, we can rewrite the above equation as:
