@@ -8,6 +8,10 @@ In this article, I will explain what neural networks are and how their training 
 
 This is not a superficial article, as mentioned, I will not spare the details, so, to better understand what I will say, you will need to have a good knowledge of [multivariable calculus](https://en.wikipedia.org/wiki/Multivariable_calculus) and [matrices](https://en.wikipedia.org/wiki/Matrix_(mathematics)).
 
+**N.B.** To best read this article I recommend using a PC, a tablet or holding your smartphone horizontally, otherwise some images and formulas will be too small and uncomfortable to read (however you can always click on them to open them in full screen).
+
+**N.B.** If you want to write a comment on this article you can do it [here](https://github.com/niedev/Blog/discussions/1).<br/><br/>
+
 We are ready to start:
 
 A **Feed Forward Network** (or **multilayer perceptron**) is the simplest type of neural network, that is, a network of artificial neurons, which is inspired by the structure of the neurons in the brain to create, through training, any function that, given certain inputs, produces certain outputs based on the data on which the training was done. 
