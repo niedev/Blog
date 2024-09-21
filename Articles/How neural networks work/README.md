@@ -214,7 +214,7 @@ Now to simplify the calculations let's consider a series of cost functions, one 
 
 For the [definition of gradient](https://en.wikipedia.org/wiki/Gradient) and the properties of gradient:
 
-<img align=left src="https://github.com/user-attachments/assets/ac8b222d-3075-446a-9d6d-9e66bd7e23cf" width=600/>
+<img align=left src="https://github.com/user-attachments/assets/09161325-7773-4377-9c7c-8a295c0537bd" width=900/>
 <BR CLEAR="all"><br/>
 
 **Now we need to understand how to calculate all the partial derivatives of f<sub>Cb</sub> in θ<sub>0</sub>** (that is, the partial derivatives in θ<sub>0</sub> with respect to each component of θ)**, to do this we need to perform the following steps:**
@@ -508,7 +508,7 @@ Now to simplify the calculations let's consider a series of cost functions, one 
 
 For the [definition of gradient](https://en.wikipedia.org/wiki/Gradient) and the properties of gradient:
 
-<img align=left src="https://github.com/user-attachments/assets/ac8b222d-3075-446a-9d6d-9e66bd7e23cf" width=600/> [EQ. a]
+<img align=left src="https://github.com/user-attachments/assets/09161325-7773-4377-9c7c-8a295c0537bd" width=900/> [EQ. a]
 <BR CLEAR="all"><br/>
 
 
