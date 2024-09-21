@@ -324,7 +324,7 @@ Recall that **δ<sup>(l)</sup>** is a constant vector (or tuple) of length nl, w
 
 #### Point 2:
 
-Now, let's consider the function $`f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (W^{(l)})))))))))`$, that is, the function equal to this one but that instead of the function z<sup>(l+1)</sup> (which depends on the inputs x = (x<sub>1</sub>, ..., x<sub>n0</sub>)) has the independent variable W^{(l)}, more precisely the function a<sup>(l)</sup> has instead of the constant W<sub>0</sub><sup>(l)</sup> the independent variable W<sup>(l)</sup> and instead of the variable $`z^{(l−1)} (a^{(L−1)} (…(z^{(1)}(a^{(1)} (x_1, …, x_{n_0} )))))`$ has the constant z<sup>(l-1)</sup><sub>0</sub> obtained via the initial feedforward (b<sub>0</sub><sup>(l)</sup> remains the same), in symbols:   
+Now, let's consider the function $`f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (W^{(l)})))))))))`$, that is, the function equal to the one defined at the beginning of point 1 (link) but that instead of the function z<sup>(l+1)</sup> (which depends on the inputs x = (x<sub>1</sub>, ..., x<sub>n0</sub>)) has the independent variable **W<sup>(l)</sup>**, more precisely the function a<sup>(l)</sup> has instead of the constant W<sub>0</sub><sup>(l)</sup> the independent variable W<sup>(l)</sup> and instead of the variable $`z^{(l−1)} (a^{(L−1)} (…(z^{(1)}(a^{(1)} (x_1, …, x_{n_0} )))))`$ has the constant z<sup>(l-1)</sup><sub>0</sub> obtained via the initial feedforward (b<sub>0</sub><sup>(l)</sup> remains the same), in symbols:   
 $`a^{(l)} (W^{(l)})= W^{(l)} ∗ z^{(l−1)}_0 + b_0^{(l)}`$
 
 Using the formula to calculate δ<sup>(l)</sup> we can prove the following equation, which finds **the gradient of the function $`f_{Cb}(z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} (W^{(l)})))))))))`$**, which we defined above, **at the point W<sub>0</sub><sup>(l)</sup>** (which will bring us to the final equation of point 2, to find $`(f_{Cb})_{W^{(l)}_{(i,j)}}(θ_0)`$ knowing only the value of $`δ^{(l)}_i`$ and $`z^{(l−1)}_{0j}`$):
@@ -334,7 +334,7 @@ Using the formula to calculate δ<sup>(l)</sup> we can prove the following equat
 
 Where I recall that **z<sup>(l−1)</sup><sub>0</sub>** is one of the values ​​we find during the initial feedforward, which more precisely is the image of z<sup>(1−1)</sup> for x = xt<sub>b</sub> (and θ = θ<sub>0</sub>). And where ⨂ is the [tensor product](https://www.math3ma.com/blog/the-tensor-product-demystified) between two tuples, that is, the product that, given two tuples, produces a tuple such that each of its elements is the product of an element of the first tuple and an element of the second tuple, and so on for all combinations of 2 elements, one of the first tuple and one of the second.
 
-**N.B.** I also remember that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient).
+**N.B.** I also remind you that a matrix of the form W<sub>0</sub><sup>(l)</sup> is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient) and a tuple of the form b<sub>0</sub><sup>(l)</sup> is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient).
 
 ___
 
@@ -417,7 +417,7 @@ Using the formula to calculate δ<sup>(l)</sup> we can prove the following equat
 
 Where I recall that **z<sup>(l−1)</sup><sub>0</sub>** is one of the values ​​we find during the initial feedforward, which more precisely is the image of z<sup>(l−1)</sup> for x = xt<sub>b</sub> (and θ = θ<sub>0</sub>).
 
-**N.B.** I also remember that a matrix of the form **W<sub>0</sub><sup>(l)</sup>** is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient) and a tuple of the form **b<sub>0</sub><sup>(l)</sup>** is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient).
+**N.B.** I also remind you that a matrix of the form **W<sub>0</sub><sup>(l)</sup>** is the (constant) matrix containing the weights of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient) and a tuple of the form **b<sub>0</sub><sup>(l)</sup>** is the (constant) tuple containing the biases of level l contained in the combination of weights and biases of θ<sub>0</sub> (i.e. the point for which we want to calculate the gradient).
 
 ___
 
