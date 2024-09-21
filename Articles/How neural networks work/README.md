@@ -367,7 +367,7 @@ So we have proved that: $`∇(f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)}
 
 ___
 
-Now, using the above equation, we derive a formula for the partial derivatives of f<sub>Cb</sub> with respect to each weight of a level l, i.e. the final formula of this point, to do so we first consider the definition of the gradient as a tuple of partial derivatives, the above equation and denote (to simplify the notation) the function $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} ({W_0}^{(l)}))))))))`$ with the symbol $`g(W_0^{(l)})`$:
+Now, using the above equation, we derive a formula for the partial derivatives of f<sub>Cb</sub> with respect to each weight of a level l, i.e. the final formula of this point, to do so we first consider the definition of the gradient as a tuple of partial derivatives and the above equation, we also denote (to simplify the notation) the function $`f_{Cb} (z^{(L)} (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(l)} (a^{(l)} ({W_0}^{(l)}))))))))`$ with the symbol $`g(W_0^{(l)})`$:
 
 <img align=left src="https://github.com/user-attachments/assets/1fb74db4-1e3c-4d73-a91e-6c67bc1dfcbd" width=900>
 [EQ. 2-1]
