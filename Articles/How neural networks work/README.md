@@ -268,13 +268,13 @@ So, if we consider **a<sup>(1)</sup>** (= a<sup>(1)</sup>(x<sub>1</sub>, ..., x<
 **Now let's see what each gradient is equal to** (we calculate the gradient of the individual functions of the composition, not of the entire composition, therefore considering the variables internal to the composition as an independent variable, at the notational level the difference is that in the case of the gradient of the entire composition the gradient symbol includes the entire composition, while, in the case of the gradient of only one of the functions of the composition, the gradient symbol includes only the law of the function whose gradient we want to calculate)**:**
 
 - According to the definition of gradient of a scalar function with multiple real variables at a point (the point is a<sup>(1)</sup><sub>0</sub>):
-  
-  <img align=left src="https://github.com/user-attachments/assets/d081e6b4-5b6d-4635-93ce-d9d4e7d45926" width=950>
+
+  <img align=left src="https://github.com/user-attachments/assets/cacd9d6f-062d-499d-860f-d7f120c4887a" width=1100>
   <BR CLEAR="all">
   
   Instead of ... in the last expression we have $`a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)}_0)))))`$, given the definition of $`a^{(1)}_{0}, a^{(1)}_{0} = a^{(1)} (xt_{b1}, …,xt_{bn_0})`$, then, for any i between 1 and nL: $`z^{(L)}_i (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)}_0))))))`$ = $`z^{(L)}_i (a^{(L)} (z^{(L−1)} (a^{(L−1)} (…(z^{(1)} (a^{(1)} (xt_{b1}, …,xt_{bn_0})))))))`$, which is the image of $`z^{(L)}_i`$ for x = xt<sub>b</sub> (and θ = θ<sub>0</sub>) (constant), which we denote with $`z^{(L)}_{0i}`$ (which coincides with the notation we used for $`a^{(1)}_0`$ in fact it is one of the values ​​we save with the initial feedforward), so we substitute it in the last expression, obtaining:
   
-  <img align=left src="https://github.com/user-attachments/assets/2a88c71b-8a9d-465a-afcc-d01840cd0129" width=420>
+  <img align=left src="https://github.com/user-attachments/assets/bd7146c7-eebc-49fa-9d82-a1ae594e56dc" width=450>
   <BR CLEAR="all">
 
   Where the expressions of the partial derivative functions are already known a priori (they only depend on the type of cost function), then the computer only has to calculate their images for the value z<sup>(L)</sup><sub>0</sub> = (z<sup>(L)</sup><sub>01</sub>, ..., z<sup>(L)</sup><sub>0nL</sub>) that it saved in the first forward pass.
@@ -392,7 +392,7 @@ Given the [EQ. 2-1] and [EQ. 2-2], we can substitute the tuple $`((f_{Cb})′_{W
 
 So, by the definition of equality between tuples, since the first and third terms are equal, their respective components are also equal, consequently we can say that:
 
-<img align=left src="https://github.com/user-attachments/assets/6dc8aa6f-1c55-4846-956a-53fc40bbe545" width=250>
+<img align=left src="https://github.com/user-attachments/assets/076ae4ac-d45b-44a2-89a9-146c35154edd" width=250>
 <BR CLEAR="all"><br/>
 
 #### Point 3:
@@ -468,10 +468,11 @@ Given the [EQ. 3-1] and [EQ. 3-2], we can substitute the tuple $`((f_{Cb})′_{b
 
 So, by the definition of equality between tuples, since the first and third terms are equal, their respective components are also equal, consequently we can say that:
 
-<img align=left src="https://github.com/user-attachments/assets/3c1528e8-ba93-4ac2-9937-d04bee4d27e1" width=180>
+<img align=left src="https://github.com/user-attachments/assets/c84d646e-952f-48ab-8004-6a9cdb6a0101" width=180>
 <BR CLEAR="all"><br/>
 
 Now let's see how the backpropagation algorithm is implemented, which will use the formulas we have found up to this point to find the gradient of f<sub>C</sub> at the point θ<sub>0</sub>: <br/><br/>
+
 
 ### Implementation of the backpropagation algorithm:
 
@@ -516,12 +517,12 @@ Given also the final formulas found in points 1), 2) and 3):
 
 [EQ. 2]:
 
-<img align=left src="https://github.com/user-attachments/assets/6dc8aa6f-1c55-4846-956a-53fc40bbe545" width=250>
+<img align=left src="https://github.com/user-attachments/assets/076ae4ac-d45b-44a2-89a9-146c35154edd" width=250>
 <BR CLEAR="all"><br/>
 
 [EQ. 3]:
 
-<img align=left src="https://github.com/user-attachments/assets/3c1528e8-ba93-4ac2-9937-d04bee4d27e1" width=180>
+<img align=left src="https://github.com/user-attachments/assets/c84d646e-952f-48ab-8004-6a9cdb6a0101" width=180>
 <BR CLEAR="all"><br/>
 
 #### The algorithm is implemented like this:
