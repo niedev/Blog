@@ -401,7 +401,7 @@ In point 3) we will use the same principles as in point 2) to compute the partia
 
 I remind you of the definition of **δ<sup>(l)</sup>**:
 
-<img align=left src="https://github.com/user-attachments/assets/f0d11d0f-f3ad-45f4-9f15-476ca0442358" width=1200>
+<img align=left src="https://github.com/user-attachments/assets/ddf7669f-137e-473b-a4ff-c7162d1e8971" width=1200>
 <BR CLEAR="all"><br/>
 
 Recall that **δ<sup>(l)</sup>** is a constant vector (or tuple) of length nl, which we denote with: **(δ<sup>(l)</sup><sub>1</sub>, δ<sup>(l)</sup><sub>2</sub>, …, δ<sup>(l)</sup><sub>nl</sub>)**<br/><br/>
@@ -512,7 +512,7 @@ Given also the final formulas found in points 1), 2) and 3):
 
 [EQ. 1]:
 
-<img align=left src="https://github.com/user-attachments/assets/f0d11d0f-f3ad-45f4-9f15-476ca0442358" width=1200>
+<img align=left src="https://github.com/user-attachments/assets/ddf7669f-137e-473b-a4ff-c7162d1e8971" width=1200>
 <BR CLEAR="all"><br/>
 
 [EQ. 2]:
