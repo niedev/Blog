@@ -541,4 +541,6 @@ At this point, each **gradient<sub>b</sub>** contains all and only the component
 
 Then we apply [EQ. a] to obtain the gradient **∇f<sub>C</sub>(θ<sub>0</sub>)**, and we are done.
 
-**N.B.** b<sub>(l)</sub> is the vector of the biases of the level l, b instead is just a natural number between 1 and m, they have nothing to do with each other.
+**N.B.** b<sub>(l)</sub> is the vector of the biases of the level l, b instead is just a natural number between 1 and m, they have nothing to do with each other.<br/><br/>
+
+Finished! If this article was useful to you, leave a star to this blog ⭐, if you have constructive criticism or considerations of any kind leave a comment here (link).
