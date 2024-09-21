@@ -543,4 +543,4 @@ Then we apply [EQ. a] to obtain the gradient **∇f<sub>C</sub>(θ<sub>0</sub>)*
 
 **N.B.** b<sub>(l)</sub> is the vector of the biases of the level l, b instead is just a natural number between 1 and m, they have nothing to do with each other.<br/><br/>
 
-Finished! If this article was useful to you, leave a star to this blog ⭐, if you have constructive criticism or considerations of any kind leave a comment here (link).
+Finished! If this article was useful to you, leave a star to this blog ⭐, if you have constructive criticism or considerations of any kind leave a comment [here](https://github.com/niedev/Blog/discussions/1).
